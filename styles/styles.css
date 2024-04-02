@@ -1,6 +1,6 @@
 * {
     margin:0px;
-    padding: 0;
+    padding: 0px;
 }
 
 body {
@@ -56,6 +56,7 @@ body {
 .hiddenNav{
     display: none;
 }
+
 .firstSection {
     margin: 45px 0;
     display: flex;
@@ -63,18 +64,20 @@ body {
     align-items: center;
 }
 
-.firstSection>div {
-    width: 35%;
-}
-
 .leftSection {
     font-size: 3rem;
+    padding: 5px;
+    width:60%;
 }
 
+.rightSection{
+    text-align: center;
+    width:20%;
+}
 
 .rightSection img {
-    margin: 0px 180px;
-    width:50%;
+    width: 250px;
+    height: 250px;
     border: 12px solid rgb(42 69 80);
     border-radius: 250px;
 }
@@ -182,7 +185,13 @@ footer a {
     text-align: center;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:1100px){
+    .firstSection .leftSection .animated-text {
+        height:150px !important;
+        color: aqua !important;
+    }
+}
+@media only screen and (max-width:840px){
     .navbar{
         display:block;
         padding: 0;
