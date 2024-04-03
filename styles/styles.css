@@ -115,7 +115,7 @@ main hr {
     height: 2px;
     border: 5px;
     background: #69329d;
-    margin: 10px 90px;
+    margin: 10px 6vw;
 }
 
 .mainSections {
@@ -129,6 +129,37 @@ main hr {
 
 .text-gray {
     color: gray;
+}
+
+#projects .project-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects .project-card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(41, 42, 70);
+    max-width: 27%;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+#projects .project-card .thumbnail img{
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-height: 180px;
+}
+
+#projects .project-card .details h4{
+    text-align: center;
+}
+
+#projects .project-card .details .stack{
+    text-align: center;
 }
 
 footer {
@@ -204,6 +235,7 @@ footer a {
     .navbar .left{
         margin:0px;
         padding:0px 5px;
+        font-size: 2rem;
     }
 
     .navbar .hamburger{
@@ -216,7 +248,7 @@ footer a {
 
     .navbar{
         background-color: #040928;
-        height: 40px;
+        height: 58px;
     }
     .responsive .right{
         width: 100%;
@@ -237,5 +269,28 @@ footer a {
 
     .small-body{
         margin-top: 240px !important;
+    }
+}
+
+@media only screen and(max-width:750px){
+    #projects .project-card{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(41, 42, 70);
+        max-width: 38%;
+        border-radius: 10px;
+        margin: 10px auto;
+        padding: 10px;
+        align-items: center;
+    }
+}
+
+@media only screen and(max-width:450px){
+    #projects .project-card{
+        background-color: rgb(41, 42, 70);
+        border-radius: 10px;
+        margin: 10px auto;
+        padding: 10px;
+        align-items: center;
     }
 }
