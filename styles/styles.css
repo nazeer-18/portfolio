@@ -9,7 +9,6 @@ body {
     color: white;
     font-family: "Poppins", sans-serif;
 }
-
 .navbar {
     display: flex;
     position:fixed;
@@ -55,6 +54,9 @@ body {
 
 .hiddenNav{
     display: none;
+}
+nav .right a.active {
+    color: #ff0000; 
 }
 
 .firstSection {
@@ -154,9 +156,9 @@ main hr {
     max-height: 180px;
 }
 
-#projects .project-card .details h4{
+/* #projects .project-card .details h4{
     text-align: center;
-}
+} */
 
 #projects .project-card .details .stack{
     text-align: center;
@@ -215,14 +217,25 @@ footer a {
     font-size: 1.3rem;
     text-align: center;
 }
-
-@media only screen and (max-width:1100px){
-    .firstSection .leftSection .animated-text {
-        height:150px !important;
-        color: aqua !important;
+@media screen and(max-width:750px){
+    #projects .project-card{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(41, 42, 70);
+        max-width: 38% !important;
+        border-radius: 10px;
+        margin: 10px auto;
+        padding: 10px;
+        align-items: center;
+        color: aqua;
     }
 }
-@media only screen and (max-width:840px){
+@media screen and (max-width:1100px){
+    .firstSection .leftSection .animated-text {
+        height:150px !important;
+    }
+}
+@media screen and (max-width:840px){
     .navbar{
         display:block;
         padding: 0;
@@ -266,26 +279,13 @@ footer a {
         padding: 0px 15px;
         margin: 0;
     }
-
+    
     .small-body{
         margin-top: 240px !important;
     }
 }
 
-@media only screen and(max-width:750px){
-    #projects .project-card{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(41, 42, 70);
-        max-width: 38%;
-        border-radius: 10px;
-        margin: 10px auto;
-        padding: 10px;
-        align-items: center;
-    }
-}
-
-@media only screen and(max-width:450px){
+@media screen and(max-width:450px){
     #projects .project-card{
         background-color: rgb(41, 42, 70);
         border-radius: 10px;
