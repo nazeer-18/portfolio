@@ -84,6 +84,11 @@ nav .right a.active {
     border-radius: 250px;
 }
 
+.rightSection img:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
 .text-purple {
     color: #a667e0
 }
@@ -141,12 +146,13 @@ main hr {
 #projects .project-card{
     display: flex;
     flex-direction: column;
-    background-color: rgb(41, 42, 70);
+    background-color: #0b165942;
     max-width: 27%;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     align-items: center;
+    border: 2px solid #ccc;
 }
 
 #projects .project-card .thumbnail img{
@@ -154,18 +160,133 @@ main hr {
     border-radius: 8px;
     margin-bottom: 10px;
     max-height: 180px;
+    border:1px solid white;
 }
 
-/* #projects .project-card .details h4{
+#projects .project-card .details{
     text-align: center;
-} */
+    display: inline;
+    width: 100%;
+}
 
-#projects .project-card .details .stack{
+#projects .project-card .details h4{
     text-align: center;
+    display: inline;
+}
+
+#projects .project-card .details .explore{
+    float: right;
+}
+
+#projects .project-card .details .explore a{
+    margin: 1px;
+    padding: 1px;
+    text-decoration: none;
+}
+
+#projects .project-card .stack{
+    width:100%;
+    margin:2px;
+}
+
+#experience .container{
+    background-color:#0b165942;
+    border:2px solid white;
+    padding: 5px;
+    margin: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+#experience .container .experience-card{
+    display: flex;
+    margin:10px;
+
+}
+
+
+#experience .experience-card .company-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience .experience-card .company-image img{
+    max-width: 100%;
+    max-height: 100% !important;
+}
+
+#experience  .experience-card .details{
+    margin: 2px;
+    padding: 3px;
+}
+
+#experience  .experience-card .details .position{
+    text-align: center;
+    margin: 3px;
+}
+
+#experience  .experience-card .details .company-name{
+    color:gray;
+    text-align: center;
+}
+
+#experience  .experience-card .details .tenure{
+    text-align: center;
+    color:gray;
+    margin: 3px;
+}
+
+#experience  .experience-card .details .work-details{
+    padding: 10px;
+}
+
+#achievements .carousel-container{
+    position: relative;
+    width: 75vw;
+    height:300px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+#achievements .carousel-container .carousel .carousel-slide{
+    display: flex;
+    flex-direction: row;
+    overflow-x:hidden;
+    transition: transform 0.5s ease;
+    background-color: #0b165942;
+}
+
+#achievements .carousel-container .carousel .carousel-slide .card{
+    flex:0 0 auto;
+    border:1px solid white;
+    width:72vw;
+    height:250px;
+    margin-right:20px;
+    padding: 10px;
+}
+
+#achievements .carousel-container .carousel button{
+    border:none;
+    cursor:pointer;
+    padding: 10px;
+    position: absolute;
+    top:40%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#achievements .carousel-container .carousel .prev{
+    left:10px;
+}
+
+#achievements .carousel-container .carousel .next{
+    right: 10px;
 }
 
 footer {
-    background-color: #040928;
+    background-color: #0b165942;
     max-width: 88vw;
     margin: auto;
     padding: 8px 0px;
@@ -285,6 +406,12 @@ footer a {
     }
 }
 
+@media screen and(max-width:1200px){
+    #projects .project-items .project-card .stack{
+        color: red;
+    }
+}
+
 @media screen and(max-width:450px){
     #projects .project-card{
         background-color: rgb(41, 42, 70);
@@ -292,5 +419,11 @@ footer a {
         margin: 10px auto;
         padding: 10px;
         align-items: center;
+    }
+}
+
+@media screen and(max-width:600px){
+    #experience .experience-card .company-image{
+        display:none !important;
     }
 }
