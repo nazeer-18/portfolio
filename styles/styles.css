@@ -164,15 +164,24 @@ main hr {
 }
 
 #skills .skills-container .skills-cat ul li{
-    margin: 10px 0px;
+    margin: 10px;
+}
+
+#skills .skills-container .skills-cat ul li:hover{
+    text-decoration: underline;
+    color: #cb48ff;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 #skills .skills-container .skills-cat ul li .badge{
     padding: 2px 8px;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 13px;
     margin-left: 10px;
     display: inline-block;
+    color: white;
+    font-weight: 515;
 }
 
 .beginner{
@@ -380,6 +389,86 @@ main hr {
     right: 10px;
 }
 
+#certifications .filter-section{
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+#certifications .filter-section #certsFilter{
+    cursor: pointer;
+    background-color: #0f2b3c;
+    color:white;
+    padding: 2px;
+    border: 1px solid wheat;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+#certifications .certsGrid{
+    margin: 9px auto;
+    padding: 2px 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#certifications .certsGrid .card{
+    border: 1px solid white;
+    flex: 1 1 270px;
+    margin: 8px;
+    padding: 5px;
+    width: 30%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+#certifications .certsGrid .card .img-container{
+    position: relative;
+    width: 100%;
+}
+
+#certifications .certsGrid .card  img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#certifications .certsGrid .card .badge{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin: 3px;
+    background-color: #4a8b39d1;
+    border-radius: 8px;
+    padding: 3px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 515;
+    cursor: pointer;
+}
+
+#certifications .certsGrid .card .img-container :hover{
+    background-color: #975bd0;
+}
+
+#certifications .certsGrid .card .certDetails{
+    padding: 5px;
+}
+
+#certifications .certsGrid .card .certDetails .org-details .org , #certifications .certsGrid .card .certDetails .date-details .date {
+    margin: 3px;
+    background-color: #43b749c4;
+    border-radius: 3px;
+    padding: 3px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 515;
+}
+
+#certifications .certsGrid .card .certDetails .date-details .date {
+    background-color: #11a6eab5;
+}
+
 footer {
     background-color: #0b165942;
     max-width: 88vw;
@@ -502,5 +591,12 @@ footer a {
     }
     .skill-cat {
         flex-basis: 100%;
+    }
+}
+
+@media (max-width:750px){
+    #certifications .certsGrid .card{
+        flex-direction: column;
+        justify-content: center;
     }
 }

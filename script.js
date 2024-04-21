@@ -33,5 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(() => {
         moveSlide(1);
-    }, 5000);
+    }, 3000);
 });
+
+function filterCerts(){
+    var filter = document.getElementById("certsFilter").value;
+    var cards = document.getElementsByClassName("card");
+    if(filter == "all")
+        filter = "";
+    for(i=0;i<cards.length;i++){
+        if(cards[i].className.indexOf(filter)>-1){
+            cards[i].style.display = "block";
+        }
+        else {
+            cards[i].style.display = "none";
+        }
+    }
+}
