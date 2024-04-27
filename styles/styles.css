@@ -216,11 +216,17 @@ main hr {
     border: 2px solid #ccc;
 }
 
+#projects .project-card .thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #projects .project-card .thumbnail img{
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    max-height: 180px;
+    max-height: 160px;
     border:1px solid white;
 }
 
@@ -252,7 +258,9 @@ main hr {
 
 #projects .project-card .stack{
     width:100%;
-    margin:2px;
+    margin:auto;
+    margin-left: 15px;
+    padding: 2px;
 }
 
 #experience .container{
@@ -430,7 +438,9 @@ main hr {
 #certifications .certsGrid .card  img{
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain;
     display: block;
+    min-height: 210px;
 }
 
 #certifications .certsGrid .card .badge{
@@ -445,10 +455,6 @@ main hr {
     font-size: 14px;
     font-weight: 515;
     cursor: pointer;
-}
-
-#certifications .certsGrid .card .img-container :hover{
-    background-color: #975bd0;
 }
 
 #certifications .certsGrid .card .certDetails{
